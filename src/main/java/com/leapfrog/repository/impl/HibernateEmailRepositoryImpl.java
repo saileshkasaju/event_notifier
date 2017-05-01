@@ -1,6 +1,7 @@
-package com.leapfrog.repository;
+package com.leapfrog.repository.impl;
 
 import com.leapfrog.model.Email;
+import com.leapfrog.repository.EmailRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
