@@ -2,6 +2,7 @@ package com.leapfrog.repository.impl;
 
 import com.leapfrog.model.Email;
 import com.leapfrog.repository.EmailRepository;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -13,8 +14,12 @@ import java.util.List;
 @Repository("emailRepository")
 public class HibernateEmailRepositoryImpl implements EmailRepository {
 
+    @Value("${dbUsername}")
+    private String dbUsername;
+
     @Override
     public List<Email> findAll() {
+        System.out.println(dbUsername);
         List<Email> emails = new ArrayList<>();
         Email email = new Email();
 
