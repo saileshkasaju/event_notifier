@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Event</title>
+    <title>Attendee Page</title>
     <style>
         .error {
             color: #ff0000;
@@ -27,13 +27,17 @@
 <body>
 <h1>Event</h1>
 
-<form:form commandName="event">
+<form:form commandName="attendee">
     <form:errors path="*" cssClass="errorblock" element="div"/>
-    <label for="textinput1">Enter Event Title</label>
+    <label for="textinput1">Enter Name</label>
     <form:input path="name" cssErrorClass="error"/>
     <form:errors path="name" cssClass="error" />
     <br>
-    <input type="submit" class="btn" value="Enter Event" />
+    <label for="textinput1">Enter Email Address</label>
+    <form:input path="emailAddress" cssErrorClass="error"/>
+    <form:errors path="emailAddress" cssClass="error" />
+    <br>
+    <input type="submit" class="btn" value="Enter Attendee" />
 </form:form>
 </body>
 </html>

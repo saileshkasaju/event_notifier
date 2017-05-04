@@ -1,0 +1,26 @@
+package com.leapfrog.model;
+
+/**
+ * Created by Edge on 5/4/2017.
+ */
+public class Attendee {
+
+    private String name;
+    private String emailAddress;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+}
