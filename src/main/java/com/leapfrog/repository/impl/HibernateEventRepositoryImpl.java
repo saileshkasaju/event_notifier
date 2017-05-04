@@ -18,7 +18,7 @@ public class HibernateEventRepositoryImpl implements EventRepository {
         List<Event> events = new ArrayList<>();
         Event event = new Event();
 
-        event.setId(1);
+//        event.setId(1);
 
         events.add(event);
 
