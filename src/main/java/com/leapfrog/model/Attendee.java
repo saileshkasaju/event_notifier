@@ -1,5 +1,6 @@
 package com.leapfrog.model;
 
+import com.leapfrog.view.Phone;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Email;
 
@@ -15,6 +16,17 @@ public class Attendee {
 
     @NotEmpty @Email
     private String emailAddress;
+
+    @NotEmpty @Phone
+    private String phone;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getName() {
         return name;
