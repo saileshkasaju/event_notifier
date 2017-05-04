@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 //import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 /**
@@ -16,7 +18,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc
 @ComponentScan({"com.leapfrog"})
 //@PropertySource("app.properties")
-public class AppConfig {
+public class AppConfig extends WebMvcConfigurerAdapter{
 //    @Bean
 //    public static PropertySourcesPlaceholderConfigurer getPropertySourcesPlaceholderConfigurer() {
 //        return new PropertySourcesPlaceholderConfigurer();
@@ -29,5 +31,11 @@ public class AppConfig {
         resolver.setSuffix(".jsp");
 
         return resolver;
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/pdfs/**").addResourceLocations("/WEB-INF/pdf/");
+        registry.addResourceHandler("/css/**").addResourceLocations("/WEB-INF/css/");
     }
 }
