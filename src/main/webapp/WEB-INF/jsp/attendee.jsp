@@ -30,8 +30,8 @@
 <a href="?language=en">
     English
 </a>
-<a href="?language=np">
-    नेपाली
+<a href="?language=es">
+    Spanish
 </a>
 <form:form commandName="attendee">
     <form:errors path="*" cssClass="errorblock" element="div"/>
