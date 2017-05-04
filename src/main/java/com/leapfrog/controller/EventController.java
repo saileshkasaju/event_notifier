@@ -6,11 +6,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 /**
  * Created by Edge on 5/4/2017.
  */
 @Controller
+@SessionAttributes("event")
 public class EventController {
     @RequestMapping(value = "/event", method = RequestMethod.GET)
     public String displayEventPage(Model model) {
