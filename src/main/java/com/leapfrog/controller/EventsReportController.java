@@ -1,6 +1,7 @@
 package com.leapfrog.controller;
 
 import com.leapfrog.model.Event;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,4 +28,5 @@ public class EventsReportController {
 
         return events;
     }
+
 }
