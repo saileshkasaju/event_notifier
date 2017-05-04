@@ -17,7 +17,7 @@ public class EventController {
     @RequestMapping(value = "/event", method = RequestMethod.GET)
     public String displayEventPage(Model model) {
         Event event = new Event();
-        event.setName("Java user group");
+        event.setTitle("Java user group");
         model.addAttribute("event", event);
         return "event";
     }

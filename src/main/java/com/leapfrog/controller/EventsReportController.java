@@ -19,11 +19,11 @@ public class EventsReportController {
     public List<Event> getEvents() {
         List<Event> events = new ArrayList<>();
         Event event1 = new Event();
-        event1.setName("Java user group");
+        event1.setTitle("Java user group");
         events.add(event1);
 
         Event event2 = new Event();
-        event2.setName("Node user group");
+        event2.setTitle("Node user group");
         events.add(event2);
 
         return events;

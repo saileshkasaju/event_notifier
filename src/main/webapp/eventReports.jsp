@@ -11,7 +11,7 @@
 
     <ul class="events-container">
         <li ng-repeat="event in events">
-            {{event.name}}
+            {{event.title}}
         </li>
     </ul>
 </div>

@@ -30,8 +30,8 @@
 <form:form commandName="event">
     <form:errors path="*" cssClass="errorblock" element="div"/>
     <label for="textinput1">Enter Event Title</label>
-    <form:input path="name" cssErrorClass="error"/>
-    <form:errors path="name" cssClass="error" />
+    <form:input path="title" cssErrorClass="error"/>
+    <form:errors path="title" cssClass="error" />
     <br>
     <input type="submit" class="btn" value="Enter Event" />
 </form:form>
