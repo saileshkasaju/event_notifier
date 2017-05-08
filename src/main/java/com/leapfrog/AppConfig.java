@@ -4,6 +4,8 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -22,7 +24,9 @@ import java.util.Locale;
 @Configuration
 @EnableWebMvc
 @ComponentScan({"com.leapfrog"})
+@PropertySource("classpath:application.properties")
 public class AppConfig extends WebMvcConfigurerAdapter{
+
 
     @Bean
     public MessageSource messageSource() {
@@ -53,10 +57,14 @@ public class AppConfig extends WebMvcConfigurerAdapter{
 
         return resolver;
     }
-
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer getPropertySourcesPlaceholderConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/pdfs/**").addResourceLocations("/WEB-INF/pdf/");
         registry.addResourceHandler("/css/**").addResourceLocations("/WEB-INF/css/");
+        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
     }
 }

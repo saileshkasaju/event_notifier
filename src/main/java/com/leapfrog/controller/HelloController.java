@@ -1,5 +1,6 @@
 package com.leapfrog.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,10 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HelloController {
+  @Value("${test}")
   private String test;
+
   @RequestMapping(value = "/greeting")
   public String sayHello(Model model) {
-    model.addAttribute("greeting", "Hello World");
+    model.addAttribute("greeting", test);
     return "hello";
   }
 

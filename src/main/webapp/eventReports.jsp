@@ -2,7 +2,7 @@
 <html ng-app>
 <head>
     <title>Hello Events Angular</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="events.js"></script>
 </head>
 <body>
