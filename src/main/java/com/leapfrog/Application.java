@@ -8,8 +8,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class Application {
     public static void main(String[] args) {
-        ApplicationContext applicationContext =
-                new AnnotationConfigApplicationContext(AppConfig.class);
-
+        AnnotationConfigApplicationContext applicationContext =
+                new AnnotationConfigApplicationContext();
+        applicationContext.register(AppConfig.class);
+        applicationContext.register(SpringJDBCConfig.class);
+        applicationContext.register(SecurityConfig.class);
     }
 }
