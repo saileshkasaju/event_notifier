@@ -1,6 +1,6 @@
 package com.leapfrog.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 /**
  * Created by Edge on 4/28/2017.
