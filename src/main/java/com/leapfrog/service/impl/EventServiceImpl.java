@@ -32,6 +32,11 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
+    public Event createEvent(Event event) {
+        eventRepository.createEvent(event);
+        return null;
+    }
+    @Override
     public List<Event> findAll() {
         return eventRepository.findAll();
     }
