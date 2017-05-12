@@ -12,6 +12,6 @@ public class Application {
                 new AnnotationConfigApplicationContext();
         applicationContext.register(AppConfig.class);
         applicationContext.register(SpringJDBCConfig.class);
-        applicationContext.register(SecurityConfig.class);
+//        applicationContext.register(SecurityConfig.class);
     }
 }
