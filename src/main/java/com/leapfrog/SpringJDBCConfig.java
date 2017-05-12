@@ -16,10 +16,10 @@ public class SpringJDBCConfig {
     @Bean
     public DataSource dataSource () {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/event_notifier");
         dataSource.setUsername("root");
-        dataSource.setPassword("root");
+        dataSource.setPassword("");
         System.out.println("DataSource Configured");
         return dataSource;
     }
