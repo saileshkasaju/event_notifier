@@ -12,21 +12,21 @@ import java.util.List;
  * Created by Edge on 5/4/2017.
  */
 
-@RestController
+//@RestController
 public class EventsReportController {
-
-    @RequestMapping("/events")
-    public List<Event> getEvents() {
-        List<Event> events = new ArrayList<>();
-        Event event1 = new Event();
-        event1.setTitle("Java user group");
-        events.add(event1);
-
-        Event event2 = new Event();
-        event2.setTitle("Node user group");
-        events.add(event2);
-
-        return events;
-    }
+//
+//    @RequestMapping("/events")
+//    public List<Event> getEvents() {
+//        List<Event> events = new ArrayList<>();
+//        Event event1 = new Event();
+//        event1.setTitle("Java user group");
+//        events.add(event1);
+//
+//        Event event2 = new Event();
+//        event2.setTitle("Node user group");
+//        events.add(event2);
+//
+//        return events;
+//    }
 
 }
